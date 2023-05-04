@@ -17,9 +17,9 @@ EXPOSE 3002
 ENV TZ=Asia/Shanghai
 
 # RUN yum -y install yum
-# RUN dnf -y update
+RUN apt-get -y update
 # 安装字体配置包，验证码需要
-# RUN dnf install -y fontconfig
+RUN apt-get install -y fontconfig
 # 设置容器的时区
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
