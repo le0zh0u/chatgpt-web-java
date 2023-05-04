@@ -17,6 +17,9 @@ EXPOSE 3002
 ENV TZ=Asia/Shanghai
 
 FROM centos:8
+
+RUN dnf -y install centos-release
+RUN dnf -y clean all 
 # RUN yum -y install yum
 RUN dnf -y update
 # 安装字体配置包，验证码需要
