@@ -16,7 +16,7 @@ EXPOSE 3002
 # 设置时区为 Asia/Shanghai
 ENV TZ=Asia/Shanghai
 
-RUN yum update
+RUN yum -y update
 # 安装字体配置包，验证码需要
 RUN yum install -y fontconfig
 # 设置容器的时区
