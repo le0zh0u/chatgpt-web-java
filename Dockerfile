@@ -1,4 +1,3 @@
-FROM centos:8
 FROM maven:3.8.3-openjdk-17 AS build
 # 复制项目文件到容器中
 COPY . /app
@@ -17,6 +16,7 @@ EXPOSE 3002
 # 设置时区为 Asia/Shanghai
 ENV TZ=Asia/Shanghai
 
+FROM centos:8
 # RUN yum -y install yum
 RUN dnf -y update
 # 安装字体配置包，验证码需要

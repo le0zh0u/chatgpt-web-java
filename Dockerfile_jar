@@ -1,4 +1,3 @@
-FROM centos:8
 FROM openjdk:17-jdk-slim
 # 从宿主机复制 jar 文件到容器中并设置工作目录
 COPY chatgpt-bootstrap/target/*.jar /app/app.jar
@@ -7,6 +6,7 @@ WORKDIR /app
 # 设置时区为 Asia/Shanghai
 ENV TZ=Asia/Shanghai
 
+FROM centos:8
 # RUN yum -y install yum
 RUN dnf -y update
 # 安装字体配置包，验证码需要
