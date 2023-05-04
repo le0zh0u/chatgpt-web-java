@@ -26,9 +26,9 @@ services:
       - JDBC_URL=jdbc:mysql://mysql_gpt:3306/chat?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
       - MYSQL_USER_NAME=root
       - MYSQL_PASSWORD=123456
-      - CHAT_OPENAI_API_KEY=xxx
+      - CHAT_OPENAI_API_KEY=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
       - CHAT_OPENAI_ACCESS_TOKEN=
-      - CHAT_OPENAI_API_BASE_URL=https://api.openai.com/
+      - CHAT_OPENAI_API_BASE_URL=https://ack.fairywoobang.com/
       - CHAT_HTTP_PROXY_HOST:127.0.0.1
     ports:
       - 3002:3002
